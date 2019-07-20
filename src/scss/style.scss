@@ -1,5 +1,15 @@
 @import "fonts";
+@import "header";
 
 body {
-  background-color: #ccc;
+  background-image: url("media/bg-fonts.png");
+}
+.center {
+  width: 1000px;
+  margin: 0 auto;
+}
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
