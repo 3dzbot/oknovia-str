@@ -17,8 +17,8 @@ var path = {
         html: "./src/**/*.html",
     },
     dist:{
-        style: "./build",
-        script: "./build",
+        style: "./build/style",
+        script: "./build/js",
         html: "./",
     }
 }
