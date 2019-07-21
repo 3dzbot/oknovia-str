@@ -1,9 +1,33 @@
+@font-face {
+  font-family: OpenSans;
+  src: url("fonts/OpenSans-Regular.ttf");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: OpenSans;
+  src: url("fonts/OpenSans-Bold.ttf");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: OpenSans;
+  src: url("fonts/OpenSans-Italic.ttf");
+  font-weight: normal;
+  font-style: italic; }
+
+@font-face {
+  font-family: OpenSans;
+  src: url("fonts/OpenSans-BoldItalic.ttf");
+  font-weight: bold;
+  font-style: italic; }
+
 .header {
   position: relative; }
   .header-top {
     justify-content: space-between;
     align-items: center;
-    padding: 7px 0 13px; }
+    padding: 10px 0 13px; }
     .header-top .logo-img {
       background-image: url("media/logo.png");
       width: 68px;
@@ -178,6 +202,7 @@
           .header-slider ul#slides .slide .slide1-wrap .timer-text {
             width: 144px;
             height: 31px;
+            font-size: 14px;
             background-image: url("media/timer-text.png");
             padding: 8px 22px; }
         .header-slider ul#slides .slide .slide1 .slide1-button {
@@ -207,7 +232,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 30px; }
+  padding-bottom: 24px; }
   .price > .center > h2 {
     width: 940px;
     color: #2e2e2e;
@@ -269,8 +294,53 @@
     padding: 10px 30px;
     margin: 13px 0 25px; }
 
+.price p.text {
+  font-size: 18px;
+  padding-bottom: 14px;
+  text-align: center; }
+
+.price p.text-phone {
+  text-align: center;
+  font-weight: bold;
+  width: 100%;
+  font-size: 24px;
+  padding-bottom: 24px; }
+
+.price h3 {
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+  font-size: 20px;
+  margin-bottom: 24px; }
+
+.price-form {
+  width: 660px;
+  padding-bottom: 14px; }
+  .price-form .form-wrap {
+    justify-content: space-between; }
+    .price-form .form-wrap .input-label {
+      width: 280px;
+      height: 14px;
+      padding: 20px;
+      border-radius: 5px;
+      position: relative;
+      box-shadow: none;
+      border: 1px solid silver; }
+      .price-form .form-wrap .input-label:after {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: -10px;
+        content: '';
+        width: 36px;
+        height: 36px;
+        background-position: center; }
+
 body {
-  background-image: url("media/bg-fonts.png"); }
+  background-image: url("media/bg-fonts.png");
+  font-family: OpenSans, Arial, sans-serif;
+  background-blend-mode: multiply;
+  background-color: rgba(255, 135, 12, 0.02); }
 
 .center {
   width: 1000px;
