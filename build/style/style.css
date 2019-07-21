@@ -69,10 +69,10 @@
   background-color: #0083b5; }
   .header-slider nav {
     position: absolute;
-    top: 24px;
+    top: 22px;
     background-color: #0083b5;
     width: 100%;
-    padding: 12px 0;
+    padding: 14px 0;
     border-top: 4px solid #fff;
     border-bottom: 4px solid #fff;
     z-index: 4; }
@@ -91,7 +91,7 @@
     .header-slider ul#slides .slide {
       position: absolute;
       left: 0;
-      top: 124px;
+      top: 118px;
       width: 100%;
       height: 100%;
       opacity: 0;
@@ -102,22 +102,22 @@
       -moz-transition: opacity 1s;
       -o-transition: opacity 1s;
       transition: opacity 1s; }
-      .header-slider ul#slides .slide h1 {
+      .header-slider ul#slides .slide > h1 {
         font-size: 44px;
         font-weight: bold;
         text-align: center; }
-      .header-slider ul#slides .slide p {
+      .header-slider ul#slides .slide > p {
         width: 597px;
         margin: 0 auto;
-        padding: 24px 0 70px; }
-        .header-slider ul#slides .slide p a {
+        padding: 20px 0 70px; }
+        .header-slider ul#slides .slide > p a {
           font-size: 24px;
           color: #fff;
           text-decoration: none;
           text-transform: uppercase;
           position: relative;
           display: block; }
-          .header-slider ul#slides .slide p a:before, .header-slider ul#slides .slide p a:after {
+          .header-slider ul#slides .slide > p a:before, .header-slider ul#slides .slide > p a:after {
             content: '';
             display: block;
             width: 6px;
@@ -126,14 +126,71 @@
             background-color: white;
             position: absolute;
             top: 8px; }
-          .header-slider ul#slides .slide p a:before {
+          .header-slider ul#slides .slide > p a:before {
             left: -14px; }
-          .header-slider ul#slides .slide p a:after {
+          .header-slider ul#slides .slide > p a:after {
             right: -14px; }
       .header-slider ul#slides .slide .slide1 {
         width: 480px;
         height: 296px;
-        border: 2px white solid; }
+        border: 2px white solid;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+        .header-slider ul#slides .slide .slide1 .slide-logo {
+          position: absolute;
+          width: 76px;
+          height: 76px;
+          border-radius: 50%;
+          background-color: white;
+          left: 202px;
+          top: -40px; }
+          .header-slider ul#slides .slide .slide1 .slide-logo:after {
+            display: block;
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-position: center; }
+          .header-slider ul#slides .slide .slide1 .slide-logo-left:after {
+            background-image: url("media/slide-logo-fire.png");
+            background-position: 45% center; }
+          .header-slider ul#slides .slide .slide1 .slide-logo-right:after {
+            background-image: url("media/slide-logo-house.png"); }
+        .header-slider ul#slides .slide .slide1 > h1 {
+          font-size: 20px;
+          font-weight: bold;
+          text-transform: uppercase;
+          text-align: center;
+          margin: 44px 23px 0; }
+        .header-slider ul#slides .slide .slide1 p {
+          margin: 14px auto 32px;
+          font-size: 18px;
+          text-align: center;
+          width: 350px; }
+        .header-slider ul#slides .slide .slide1-wrap {
+          width: 440px;
+          margin: 0 20px 34px; }
+          .header-slider ul#slides .slide .slide1-wrap .timer-text {
+            width: 144px;
+            height: 31px;
+            background-image: url("media/timer-text.png");
+            padding: 8px 22px; }
+        .header-slider ul#slides .slide .slide1 .slide1-button {
+          width: 322px;
+          height: 54px;
+          background-color: #f39c12;
+          text-transform: uppercase;
+          color: #fff;
+          font-size: 17px;
+          border-radius: 5px; }
+          .header-slider ul#slides .slide .slide1 .slide1-button:hover {
+            cursor: pointer;
+            background-color: #e67e22; }
     .header-slider ul#slides .slide:nth-of-type(1) {
       background-color: #3ea5ce; }
     .header-slider ul#slides .slide:nth-of-type(2) {
