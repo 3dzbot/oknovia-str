@@ -323,38 +323,61 @@
       .price-form .form-wrap label:after {
         display: block;
         position: absolute;
-        top: 0;
-        right: 0;
+        top: -18px;
+        background-repeat: no-repeat;
+        left: 280px;
         content: '';
         width: 36px;
         height: 36px;
         background-position: center;
-        z-index: 3;
+        z-index: 3; }
+      .price-form .form-wrap label[for="input-name"]:after {
         background-image: url("media/form-after-man.png"); }
+      .price-form .form-wrap label[for="input-phone"]:after {
+        background-image: url("media/form-after-phone.png"); }
     .price-form .form-wrap .input-label {
       width: 280px;
       height: 14px;
       padding: 20px;
       border-radius: 5px;
-      position: relative;
-      box-shadow: none;
       border: 1px solid silver;
       z-index: 2; }
-      .price-form .form-wrap .input-label:after {
-        display: block;
-        position: absolute;
-        top: 0;
-        right: 0;
-        content: '';
-        width: 36px;
-        height: 36px;
-        background-position: center;
-        z-index: 3;
-        background-image: url("media/form-after-man.png"); }
-    .price-form .form-wrap .input-label-name:after {
-      background-image: url("media/form-after-man.png"); }
-    .price-form .form-wrap .input-label-phone:after {
-      background-image: url("media/form-after-phone.png"); }
+  .price-form .form-btn {
+    margin: 0 168px 17px;
+    width: 322px;
+    height: 54px;
+    font-size: 17px;
+    padding: 0 40px;
+    background-color: #f39c12;
+    border-radius: 5px;
+    color: #fff;
+    text-transform: uppercase; }
+    .price-form .form-btn:hover {
+      background-color: #e67e22;
+      cursor: pointer; }
+
+.price .security {
+  width: 282px;
+  height: 25px;
+  background-image: url("media/security-blue.png");
+  margin: 0 auto 43px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  position: relative; }
+  .price .security-title {
+    width: 220px;
+    height: 64px;
+    position: absolute;
+    display: none;
+    text-align: center;
+    font-size: 12px;
+    top: 7px;
+    left: 22px;
+    background-image: url("media/sky-text.png");
+    background-size: cover;
+    padding: 15px 5px 0; }
+  .price .security:hover .security-title {
+    display: block; }
 
 body {
   background-image: url("media/bg-fonts.png");
