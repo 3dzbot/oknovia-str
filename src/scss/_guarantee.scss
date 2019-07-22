@@ -1,0 +1,82 @@
+.guarantee {
+  & > .center {
+    & > h2 {
+      font-size: 30px;
+      text-align: center;
+      padding: 36px 0 25px;
+    }
+
+    & > .flex {
+      width: 961px;
+    }
+  }
+
+  &-year {
+    width: 175px;
+    height: 152px;
+  }
+
+  &-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 40px;
+
+    &-1 {
+      background-image: url("media/40years.png");
+    }
+
+    &-2 {
+      background-image: url("media/2years.png");
+    }
+
+    &-3 {
+      background-image: url("media/60years.png");
+    }
+
+    & > h3 {
+      font-size: 18px;
+      font-weight: bold;
+      line-height: 22px;
+      text-transform: uppercase;
+      text-align: center;
+      width: 265px;
+
+      &:first-child {
+        width: 300px;
+      }
+    }
+  }
+  &-wrap {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-bottom: 40px;
+  }
+  &-photo {
+    width: 265px;
+    height: 287px;
+    background-image: url("media/guarantee-photo.png");
+  }
+  &-text {
+    width: 655px;
+    &>h3 {
+      font-size: 26px;
+      color: #2283aa;
+    }
+    &>ol {
+      padding-top: 12px;
+      list-style-type: none;
+      counter-reset:  item;
+      &>li {
+        font-size: 15px;
+        line-height: 19px;
+        padding-top: 3px;
+        &:before {
+          content: counter(item) ') ';
+          counter-increment: item;
+        }
+      }
+    }
+  }
+}

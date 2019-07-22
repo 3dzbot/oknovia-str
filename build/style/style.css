@@ -398,6 +398,67 @@
       font-size: 16px;
       line-height: 30px; }
 
+.guarantee > .center > h2 {
+  font-size: 30px;
+  text-align: center;
+  padding: 36px 0 25px; }
+
+.guarantee > .center > .flex {
+  width: 961px; }
+
+.guarantee-year {
+  width: 175px;
+  height: 152px; }
+
+.guarantee-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 40px; }
+  .guarantee-flex-1 {
+    background-image: url("media/40years.png"); }
+  .guarantee-flex-2 {
+    background-image: url("media/2years.png"); }
+  .guarantee-flex-3 {
+    background-image: url("media/60years.png"); }
+  .guarantee-flex > h3 {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 22px;
+    text-transform: uppercase;
+    text-align: center;
+    width: 265px; }
+    .guarantee-flex > h3:first-child {
+      width: 300px; }
+
+.guarantee-wrap {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-bottom: 40px; }
+
+.guarantee-photo {
+  width: 265px;
+  height: 287px;
+  background-image: url("media/guarantee-photo.png"); }
+
+.guarantee-text {
+  width: 655px; }
+  .guarantee-text > h3 {
+    font-size: 26px;
+    color: #2283aa; }
+  .guarantee-text > ol {
+    padding-top: 12px;
+    list-style-type: none;
+    counter-reset: item; }
+    .guarantee-text > ol > li {
+      font-size: 15px;
+      line-height: 19px;
+      padding-top: 3px; }
+      .guarantee-text > ol > li:before {
+        content: counter(item) ") ";
+        counter-increment: item; }
+
 body {
   background-image: url("media/bg-fonts.png");
   font-family: OpenSans, Arial, sans-serif;
