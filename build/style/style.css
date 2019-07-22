@@ -379,6 +379,25 @@
   .price .security:hover .security-title {
     display: block; }
 
+.promo {
+  background-image: url("media/promo-bg.png"); }
+  .promo-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 43px 0 27px;
+    color: #fff; }
+  .promo h3 {
+    font-size: 30px;
+    padding-bottom: 10px; }
+  .promo-text {
+    width: 504px;
+    text-align: center; }
+    .promo-text > h4 {
+      text-transform: uppercase;
+      font-size: 16px;
+      line-height: 30px; }
+
 body {
   background-image: url("media/bg-fonts.png");
   font-family: OpenSans, Arial, sans-serif;

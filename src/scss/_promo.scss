@@ -1,0 +1,23 @@
+.promo {
+  background-image: url("media/promo-bg.png");
+  &-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 43px 0 27px;
+    color: #fff;
+  }
+  h3 {
+    font-size: 30px;
+    padding-bottom: 10px;
+  }
+  &-text {
+    width: 504px;
+    text-align: center;
+    &>h4{
+      text-transform: uppercase;
+      font-size: 16px;
+      line-height: 30px;
+    }
+  }
+}
