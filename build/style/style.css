@@ -459,6 +459,39 @@
         content: counter(item) ") ";
         counter-increment: item; }
 
+.certificates {
+  padding-bottom: 58px;
+  background-image: url("media/certificates-bg.png"); }
+  .certificates .center > h3 {
+    text-align: center;
+    font-size: 30px;
+    color: #fff;
+    padding: 43px 0 28px; }
+  .certificates-flex {
+    width: 221px;
+    height: 268px;
+    border-radius: 5px;
+    position: relative;
+    background-color: white;
+    background-position: center;
+    background-repeat: no-repeat; }
+  .certificates-1 {
+    background-image: url("media/sertificate1.png"); }
+  .certificates-2 {
+    background-image: url("media/sertificate2.png"); }
+  .certificates-3 {
+    background-image: url("media/sertificate3.png"); }
+  .certificates-4 {
+    background-image: url("media/sertificate4.png"); }
+  .certificates-icon {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 47px;
+    height: 47px;
+    background-image: url("media/magnifier.png");
+    opacity: 0.8; }
+
 body {
   background-image: url("media/bg-fonts.png");
   font-family: OpenSans, Arial, sans-serif;

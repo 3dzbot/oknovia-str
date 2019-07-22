@@ -1,0 +1,37 @@
+.certificates {
+  padding-bottom: 58px;
+  background-image: url("media/certificates-bg.png");
+  .center > h3 {
+    text-align: center;
+    font-size: 30px;
+    color: #fff;
+    padding: 43px 0 28px;
+  }
+  &-flex {
+    width: 221px;
+    height: 268px;
+    border-radius: 5px;
+    position: relative;
+    background-color: white;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  &-1 {
+    background-image: url("media/sertificate1.png");
+  }&-2 {
+    background-image: url("media/sertificate2.png");
+  }&-3 {
+    background-image: url("media/sertificate3.png");
+  }&-4 {
+    background-image: url("media/sertificate4.png");
+  }
+  &-icon {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 47px;
+    height: 47px;
+    background-image: url("media/magnifier.png");
+    opacity: 0.8;
+  }
+}
