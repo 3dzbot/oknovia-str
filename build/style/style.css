@@ -314,10 +314,23 @@
   margin-bottom: 24px; }
 
 .price-form {
-  width: 660px;
-  padding-bottom: 14px; }
+  width: 660px; }
   .price-form .form-wrap {
+    padding-bottom: 14px;
     justify-content: space-between; }
+    .price-form .form-wrap label {
+      position: relative; }
+      .price-form .form-wrap label:after {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        content: '';
+        width: 36px;
+        height: 36px;
+        background-position: center;
+        z-index: 3;
+        background-image: url("media/form-after-man.png"); }
     .price-form .form-wrap .input-label {
       width: 280px;
       height: 14px;
@@ -325,16 +338,23 @@
       border-radius: 5px;
       position: relative;
       box-shadow: none;
-      border: 1px solid silver; }
+      border: 1px solid silver;
+      z-index: 2; }
       .price-form .form-wrap .input-label:after {
         display: block;
         position: absolute;
-        top: 10px;
-        right: -10px;
+        top: 0;
+        right: 0;
         content: '';
         width: 36px;
         height: 36px;
-        background-position: center; }
+        background-position: center;
+        z-index: 3;
+        background-image: url("media/form-after-man.png"); }
+    .price-form .form-wrap .input-label-name:after {
+      background-image: url("media/form-after-man.png"); }
+    .price-form .form-wrap .input-label-phone:after {
+      background-image: url("media/form-after-phone.png"); }
 
 body {
   background-image: url("media/bg-fonts.png");

@@ -117,9 +117,25 @@
   }
   &-form {
     width: 660px;
-    padding-bottom: 14px;
     .form-wrap {
+      padding-bottom: 14px;
       justify-content: space-between;
+      label {
+        position: relative;
+
+        &:after {
+          display: block;
+          position: absolute;
+          top: 0;
+          right: 0;
+          content: '';
+          width: 36px;
+          height: 36px;
+          background-position: center;
+          z-index: 3;
+          background-image: url("media/form-after-man.png");
+        }
+      }
       .input-label {
         width: 280px;
         height: 14px;
@@ -128,16 +144,26 @@
         position: relative;
         box-shadow: none;
         border: 1px solid silver;
+        z-index: 2;
         &:after {
           display: block;
           position: absolute;
-          top: 10px;
-          right: -10px;
+          top: 0;
+          right: 0;
           content: '';
           width: 36px;
           height: 36px;
           background-position: center;
+          z-index: 3;
+          background-image: url("media/form-after-man.png");
+
         }
+      }
+      .input-label-name:after {
+        background-image: url("media/form-after-man.png");
+      }
+      .input-label-phone:after {
+        background-image: url("media/form-after-phone.png");
       }
     }
   }
