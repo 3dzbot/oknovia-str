@@ -656,6 +656,27 @@ textarea {
         font-size: 14px;
         padding-top: 4px; }
 
+.form-second {
+  padding: 40px 0 34px; }
+  .form-second-wrap {
+    background-color: white;
+    width: 100%;
+    border: 4px silver solid; }
+    .form-second-wrap > h3 {
+      text-align: center;
+      font-size: 30px;
+      line-height: 32px;
+      padding-top: 23px; }
+    .form-second-wrap > p {
+      text-align: center;
+      font-size: 24px;
+      line-height: 32px;
+      color: #2283aa;
+      padding-bottom: 28px; }
+
+.security-second {
+  margin-bottom: 14px; }
+
 body {
   background-image: url("media/bg-fonts.png");
   font-family: OpenSans, Arial, sans-serif;
