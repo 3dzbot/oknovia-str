@@ -617,6 +617,45 @@ textarea {
     font-size: 15px;
     font-style: italic; }
 
+.learn-true {
+  background-image: url("media/learn-true-bg.png");
+  background-size: cover; }
+  .learn-true > .center {
+    color: #ffffff; }
+    .learn-true > .center > h3 {
+      padding-top: 37px;
+      font-size: 30px;
+      text-align: center;
+      line-height: 32px; }
+    .learn-true > .center > p {
+      font-size: 24px;
+      line-height: 32px;
+      text-align: center;
+      padding-bottom: 23px; }
+  .learn-true .learn-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start; }
+    .learn-true .learn-flex-wrap {
+      display: flex;
+      justify-content: space-between;
+      width: 657px;
+      margin: 0 auto; }
+    .learn-true .learn-flex-block {
+      width: 310px;
+      padding: 0 0 57px; }
+      .learn-true .learn-flex-block .learn-logo {
+        height: 64px;
+        margin-bottom: 22px;
+        background-image: url("media/learn-logo.png"); }
+      .learn-true .learn-flex-block > h4 {
+        text-transform: uppercase;
+        font-size: 15px; }
+      .learn-true .learn-flex-block > p {
+        font-size: 14px;
+        padding-top: 4px; }
+
 body {
   background-image: url("media/bg-fonts.png");
   font-family: OpenSans, Arial, sans-serif;
