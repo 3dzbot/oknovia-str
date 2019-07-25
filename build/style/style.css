@@ -556,19 +556,16 @@ textarea {
   width: 213px; }
 
 .form-block {
-  height: 519px;
   background-image: url("media/form-bg.png");
-  background-repeat: no-repeat;
-  background-size: contain;
   color: #ffffff;
   text-align: center; }
   .form-block > .center > h3 {
     font-size: 30px;
     width: 900px;
-    padding-top: 40px; }
+    padding-top: 36px; }
   .form-block > .center > p {
     font-size: 21px;
-    padding: 20px 0 0;
+    padding: 16px 0 0;
     font-weight: bold;
     width: 890px; }
 
@@ -578,9 +575,11 @@ textarea {
 .security-title-form {
   color: #000; }
 
-.form-block-form .form-btn-form {
-  width: 359px;
-  padding: 0 10px; }
+.form-block-form {
+  padding-top: 16px; }
+  .form-block-form .form-btn-form {
+    width: 359px;
+    padding: 0 10px; }
 
 body {
   background-image: url("media/bg-fonts.png");
