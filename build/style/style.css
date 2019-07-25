@@ -581,6 +581,42 @@ textarea {
     width: 359px;
     padding: 0 10px; }
 
+.comments > .center > h3 {
+  font-size: 30px;
+  text-align: center;
+  padding: 55px 0 0; }
+
+.comments-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 33px; }
+
+.comments-block {
+  width: 480px; }
+  .comments-block .comments-block-top {
+    align-items: flex-start;
+    padding-top: 36px; }
+  .comments-block-title-img {
+    width: 248px;
+    height: 55px;
+    background-image: url("media/comm-logo.png");
+    margin-left: 14px; }
+  .comments-block-title .comments-block-man {
+    margin-left: 40px; }
+    .comments-block-title .comments-block-man > h4 {
+      color: #3ea5ce;
+      font-size: 15px;
+      font-weight: bold; }
+    .comments-block-title .comments-block-man > span {
+      color: #f39c12;
+      font-size: 14px;
+      line-height: 20px; }
+  .comments-block > p {
+    padding-top: 30px;
+    font-size: 15px;
+    font-style: italic; }
+
 body {
   background-image: url("media/bg-fonts.png");
   font-family: OpenSans, Arial, sans-serif;
