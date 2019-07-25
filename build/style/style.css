@@ -331,9 +331,9 @@
         height: 36px;
         background-position: center;
         z-index: 3; }
-      .price-form .form-wrap label[for="input-name"]:after {
+      .price-form .form-wrap label[for="input-name"]:after, .price-form .form-wrap label[for="input-name-f"]:after {
         background-image: url("media/form-after-man.png"); }
-      .price-form .form-wrap label[for="input-phone"]:after {
+      .price-form .form-wrap label[for="input-phone"]:after, .price-form .form-wrap label[for="input-phone-f"]:after {
         background-image: url("media/form-after-phone.png"); }
     .price-form .form-wrap .input-label {
       width: 280px;
@@ -356,15 +356,16 @@
       background-color: #e67e22;
       cursor: pointer; }
 
-.price .security {
+.security {
   width: 282px;
   height: 25px;
   background-image: url("media/security-blue.png");
   margin: 0 auto 43px;
   background-repeat: no-repeat;
   cursor: pointer;
-  position: relative; }
-  .price .security-title {
+  position: relative;
+  z-index: 3; }
+  .security-title {
     width: 220px;
     height: 64px;
     position: absolute;
@@ -375,9 +376,17 @@
     left: 22px;
     background-image: url("media/sky-text.png");
     background-size: cover;
-    padding: 15px 5px 0; }
-  .price .security:hover .security-title {
+    padding: 15px 5px 0;
+    z-index: 4; }
+  .security:hover .security-title {
     display: block; }
+
+textarea {
+  width: 612px;
+  height: 48px;
+  padding: 15px 20px;
+  border-radius: 5px;
+  margin: 0 4px 27px; }
 
 .promo {
   background-image: url("media/promo-bg.png"); }
@@ -545,6 +554,33 @@
   font-size: 15px;
   font-weight: bold;
   width: 213px; }
+
+.form-block {
+  height: 519px;
+  background-image: url("media/form-bg.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  color: #ffffff;
+  text-align: center; }
+  .form-block > .center > h3 {
+    font-size: 30px;
+    width: 900px;
+    padding-top: 40px; }
+  .form-block > .center > p {
+    font-size: 21px;
+    padding: 20px 0 0;
+    font-weight: bold;
+    width: 890px; }
+
+.form-block-security {
+  background-image: url("media/security.png"); }
+
+.security-title-form {
+  color: #000; }
+
+.form-block-form .form-btn-form {
+  width: 359px;
+  padding: 0 10px; }
 
 body {
   background-image: url("media/bg-fonts.png");

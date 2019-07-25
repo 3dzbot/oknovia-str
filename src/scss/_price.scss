@@ -134,10 +134,10 @@
           background-position: center;
           z-index: 3;
         }
-        &[for="input-name"]:after {
+        &[for="input-name"]:after, &[for="input-name-f"]:after {
            background-image: url("media/form-after-man.png");
          }
-        &[for="input-phone"]:after {
+        &[for="input-phone"]:after, &[for="input-phone-f"]:after {
           background-image: url("media/form-after-phone.png");
         }
       }
@@ -166,29 +166,38 @@
       }
     }
   }
-  .security {
-    width: 282px;
-    height: 25px;
-    background-image: url("media/security-blue.png");
-    margin: 0 auto 43px;
-    background-repeat: no-repeat;
-    cursor: pointer;
-    position: relative;
-    &-title {
-      width: 220px;
-      height: 64px;
-      position: absolute;
-      display: none;
-      text-align: center;
-      font-size: 12px;
-      top: 7px;
-      left: 22px;
-      background-image: url("media/sky-text.png");
-      background-size: cover;
-      padding: 15px 5px 0;
-    }
-    &:hover .security-title {
-      display: block;
-    }
+}
+.security {
+  width: 282px;
+  height: 25px;
+  background-image: url("media/security-blue.png");
+  margin: 0 auto 43px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  position: relative;
+  z-index: 3;
+  &-title {
+    width: 220px;
+    height: 64px;
+    position: absolute;
+    display: none;
+    text-align: center;
+    font-size: 12px;
+    top: 7px;
+    left: 22px;
+    background-image: url("media/sky-text.png");
+    background-size: cover;
+    padding: 15px 5px 0;
+    z-index: 4;
   }
+  &:hover .security-title {
+    display: block;
+  }
+}
+textarea {
+  width: 612px;
+  height: 48px;
+  padding: 15px 20px;
+  border-radius: 5px;
+  margin: 0 4px 27px;
 }

@@ -1,0 +1,31 @@
+.form-block {
+  height: 519px;
+  background-image: url("media/form-bg.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  color: #ffffff;
+  text-align: center;
+  & > .center {
+    &> h3 {
+      font-size: 30px;
+      width: 900px;
+      padding-top: 40px;
+    }
+    &>p {
+      font-size: 21px;
+      padding: 20px 0 0;
+      font-weight: bold;
+      width: 890px;
+    }
+  }
+}
+.form-block-security {
+  background-image: url("media/security.png");
+}
+.security-title-form {
+  color: #000;
+}
+.form-block-form .form-btn-form {
+  width: 359px;
+  padding: 0 10px;
+}
