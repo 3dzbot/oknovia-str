@@ -1,0 +1,64 @@
+.our-skills {
+  &-flex {
+    padding-bottom: 35px;
+    & > h3 {
+      padding: 40px 0 0;
+      font-size: 30px;
+    }
+  }
+  .our-skills-img {
+    margin: 25px 0 16px;
+    width: 147px;
+    height: 147px;
+    border: 6px solid silver;
+    border-radius: 50%;
+    box-sizing: border-box;
+    transition: all .3s;
+    background-position: center center;
+  }
+  .our-skills-img:hover {
+    border: none;
+    cursor: pointer;
+  }
+  &-1 {
+    .our-skills-1-img {
+      background-image: url("media/skills1.png");
+    }
+    .our-skills-2-img {
+      background-image: url("media/skills2.png");
+    }
+    .our-skills-3-img {
+      background-image: url("media/skills3.png");
+    }
+    .our-skills-4-img {
+      background-image: url("media/skills4.png");
+    }
+  }
+  &-2 {
+    .our-skills-1-img {
+      background-image: url("media/skills5.png");
+    }
+    .our-skills-2-img {
+      background-image: url("media/skills6.png");
+    }
+    .our-skills-3-img {
+      background-image: url("media/skills7.png");
+    }
+  }
+  &-3 {
+    .our-skills-1-img {
+      background-image: url("media/skills8.png");
+    }
+    .our-skills-2-img {
+      background-image: url("media/skills9.png");
+    }
+  }
+
+  .flex > .flex-col > h4 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    width: 213px;
+  }
+}

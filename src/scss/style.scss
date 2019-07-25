@@ -5,6 +5,8 @@
 @import "promo";
 @import "guarantee";
 @import "certificates";
+@import "our-skills";
+@import "form";
 
 body {
   background-image: url("media/bg-fonts.png");
@@ -20,4 +22,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.flex-col {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  //justify-content: space-between;
 }
