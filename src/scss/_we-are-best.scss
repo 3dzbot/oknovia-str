@@ -1,0 +1,58 @@
+.we-are-best {
+  background-image: url("media/we-are-best-bg.png");
+  background-color: #e8e8e8;
+  color: #ffffff;
+  text-align: center;
+  & > .center {
+    & > h3 {
+      font-size: 30px;
+      color: #ffffff;
+      text-align: center;
+      padding: 46px 0 30px;
+      line-height: 32px;
+    }
+  }
+  .we-are-flex-col {
+    width: 298px;
+    padding-bottom: 36px;
+    .we-are-best-circle {
+      width: 147px;
+      height: 147px;
+      border-radius: 50%;
+      background-color: #ffffff;
+      border: 6px solid rgba(0, 0, 0, 0.17);
+      box-sizing: content-box;
+      position: relative;
+      &:after {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 117px;
+        height: 117px;
+        border-radius: 50%;
+        border: 5px solid #f39c12;
+        content: '';
+        background-image: url("media/we-after1.png");
+        z-index: 4;
+        background-position: 33% 43%;
+        background-repeat: no-repeat;
+      }
+      &:hover {
+        cursor: pointer;
+        &:after {
+          border-color: darkred;
+        }
+      }
+    }
+    & >h4 {
+      text-transform: uppercase;
+      font-size: 15px;
+      padding-top: 20px;
+      line-height: 19px;
+    }
+    &>p {
+      font-size: 14px;
+      line-height: 17px;
+    }
+  }
+}

@@ -17,6 +17,11 @@
     border-bottom: 1px dashed #3ea5ce;
     font-size: 22px;
     line-height: 32px;
+    transition: .3s;
+    &:hover {
+      color: #f39c12;
+      border-color: #f39c12;
+    }
   }
   &-arrow {
     height: 95px;
