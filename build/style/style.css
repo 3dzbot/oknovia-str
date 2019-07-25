@@ -677,6 +677,28 @@ textarea {
 .security-second {
   margin-bottom: 14px; }
 
+.our-links {
+  background: #e8e8e8; }
+  .our-links > .center > h3 {
+    font-size: 30px;
+    text-align: center;
+    padding: 50px 0 30px; }
+  .our-links-flex {
+    width: 100%;
+    padding-bottom: 50px; }
+  .our-links-list > li > a {
+    color: #3ea5ce;
+    text-decoration: none;
+    border-bottom: 1px dashed #3ea5ce;
+    font-size: 22px;
+    line-height: 32px; }
+  .our-links-arrow {
+    height: 95px;
+    width: 11px;
+    background-image: url("media/arrow-link.png"); }
+  .our-links-text {
+    width: 466px; }
+
 body {
   background-image: url("media/bg-fonts.png");
   font-family: OpenSans, Arial, sans-serif;
