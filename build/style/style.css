@@ -22,31 +22,31 @@
   font-weight: bold;
   font-style: italic; }
 
-.header {
+.header, .footer {
   position: relative; }
-  .header-top {
+  .header-top, .footer-top {
     justify-content: space-between;
     align-items: center;
     padding: 10px 0 13px; }
-    .header-top .logo-img {
+    .header-top .logo-img, .footer-top .logo-img {
       background-image: url("media/logo.png");
       width: 68px;
       height: 61px;
       background-repeat: no-repeat;
       background-position: center center;
       padding-right: 16px; }
-    .header-top .logo h1 {
+    .header-top .logo h1, .footer-top .logo h1 {
       font-size: 24px;
       font-weight: bold;
       text-transform: uppercase; }
-    .header-top .logo p {
+    .header-top .logo p, .footer-top .logo p {
       font-size: 13px;
       color: #3ea5ce; }
-    .header-top .header-contact-phone {
+    .header-top .header-contact-phone, .footer-top .header-contact-phone {
       padding-right: 32px;
       text-align: right;
       position: relative; }
-      .header-top .header-contact-phone:before {
+      .header-top .header-contact-phone:before, .footer-top .header-contact-phone:before {
         content: '';
         display: inline-block;
         position: absolute;
@@ -55,18 +55,18 @@
         background-image: url("media/phone-icon.png");
         top: 0;
         left: -56px; }
-      .header-top .header-contact-phone a {
+      .header-top .header-contact-phone a, .footer-top .header-contact-phone a {
         color: #272727;
         text-decoration: none;
         font-size: 24px; }
-        .header-top .header-contact-phone a span {
+        .header-top .header-contact-phone a span, .footer-top .header-contact-phone a span {
           font-size: 17px;
           color: #0083b5; }
-      .header-top .header-contact-phone p {
+      .header-top .header-contact-phone p, .footer-top .header-contact-phone p {
         font-size: 13px;
         color: #272727;
         line-height: 23px; }
-    .header-top .header-contact button {
+    .header-top .header-contact button, .footer-top .header-contact button {
       font-size: 17px;
       background-color: #f39c12;
       color: #fff;
@@ -78,9 +78,9 @@
       width: 187px;
       height: 42px;
       border-radius: 5px; }
-      .header-top .header-contact button:hover {
+      .header-top .header-contact button:hover, .footer-top .header-contact button:hover {
         cursor: pointer; }
-      .header-top .header-contact button:active {
+      .header-top .header-contact button:active, .footer-top .header-contact button:active {
         box-shadow: 0 -3px 0 rgba(0, 0, 0, 0.1);
         text-shadow: -2px -2px 0 rgba(0, 0, 0, 0.15); }
 
@@ -761,6 +761,23 @@ textarea {
   border: 1px solid silver;
   text-align: center;
   margin-bottom: 16px; }
+
+.footer {
+  background-color: #4f4f4f;
+  padding-bottom: 24px; }
+  .footer > .flex {
+    justify-content: space-between; }
+  .footer-bottom {
+    text-align: center; }
+    .footer-bottom > p {
+      padding: 13px 0 10px;
+      color: #ffffff;
+      font-size: 14px;
+      opacity: .5; }
+    .footer-bottom > a {
+      color: #0083b5;
+      font-size: 14px;
+      text-decoration: underline; }
 
 body {
   background-image: url("media/bg-fonts.png");

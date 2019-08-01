@@ -1,0 +1,21 @@
+.footer {
+  background-color: #4f4f4f;
+  padding-bottom: 24px;
+  & > .flex {
+    justify-content: space-between;
+  }
+  &-bottom {
+    text-align: center;
+    &>  p {
+      padding: 13px 0 10px;
+      color: #ffffff;
+      font-size: 14px;
+      opacity: .5;
+    }
+    &>a {
+      color: #0083b5;
+      font-size: 14px;
+      text-decoration: underline;
+    }
+  }
+}
