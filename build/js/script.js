@@ -48,58 +48,108 @@ anchors.forEach(function (item) {
   });
 }); //timer for sales-events block
 
-var timeFrom = 1585979; //starting point1
+var timeFrom = 311761; //starting point1 in sec
 
-var timeFrom1 = 1585979; //starting point2
+var timeFrom1 = 579515; //starting point2
 
 var msInMin = 60;
 var msInHour = msInMin * 60;
 var msInDay = msInHour * 24;
-var dayElement = document.getElementById('day');
-var hourElement = document.getElementById('hour');
-var minElement = document.getElementById('min');
-var secElement = document.getElementById('sec');
-timer();
+var dayElement1 = document.getElementById('day1');
+var dayElement2 = document.getElementById('day2');
+var hourElement1 = document.getElementById('hour1');
+var hourElement2 = document.getElementById('hour2');
+var minElement1 = document.getElementById('min1');
+var minElement2 = document.getElementById('min2');
+var secElement1 = document.getElementById('sec1');
+var secElement2 = document.getElementById('sec2');
+timer1(); //start timer function for 1st timer
 
-function timer() {
-  var interval = setInterval(function () {
+timer2(); //start timer function for 2nd timer
+
+function timer1() {
+  var interval1 = setInterval(function () {
     if (timeFrom > 0) {
-      getTime(timeFrom);
+      getTime1(timeFrom);
       timeFrom--;
     } else {
-      clearInterval(interval);
+      clearInterval(interval1);
     }
   }, 1000);
 }
 
-function getTime(time) {
+function timer2() {
+  var interval2 = setInterval(function () {
+    if (timeFrom1 > 0) {
+      getTime2(timeFrom1);
+      timeFrom1--;
+    } else {
+      clearInterval(interval2);
+    }
+  }, 1000);
+}
+
+function getTime1(time) {
   var dayCounts = Math.floor(time / msInDay);
   var hourCount = Math.floor(time % msInDay / msInHour);
   var minCount = Math.floor(time % msInHour / msInMin);
   var secCount = Math.floor(time % msInMin);
 
   if (String(dayCounts).length > 1) {
-    dayElement.innerText = dayCounts;
+    dayElement1.innerText = dayCounts;
   } else {
-    dayElement.innerHTML = '<b>0</b>' + dayCounts;
+    dayElement1.innerHTML = '<b>0</b>' + dayCounts;
   }
 
   if (String(hourCount).length > 1) {
-    hourElement.innerText = hourCount;
+    hourElement1.innerText = hourCount;
   } else {
-    hourElement.innerHTML = '<b>0</b>' + hourCount;
+    hourElement1.innerHTML = '<b>0</b>' + hourCount;
   }
 
-  if (String(minElement).length > 1) {
-    minElement.innerText = minCount;
+  if (String(minCount).length > 1) {
+    minElement1.innerText = minCount;
   } else {
-    minElement.innerHTML = '<b>0</b>' + minCount;
+    minElement1.innerHTML = '<b>0</b>' + minCount;
   }
 
   if (String(secCount).length > 1) {
-    secElement.innerText = secCount;
+    secElement1.innerText = secCount;
   } else {
-    secElement.innerHTML = '<b>0</b>' + secCount;
+    secElement1.innerHTML = '<b>0</b>' + secCount;
+  }
+}
+
+;
+
+function getTime2(time) {
+  var dayCounts = Math.floor(time / msInDay);
+  var hourCount = Math.floor(time % msInDay / msInHour);
+  var minCount = Math.floor(time % msInHour / msInMin);
+  var secCount = Math.floor(time % msInMin);
+
+  if (String(dayCounts).length > 1) {
+    dayElement2.innerText = dayCounts;
+  } else {
+    dayElement2.innerHTML = '<b>0</b>' + dayCounts;
+  }
+
+  if (String(hourCount).length > 1) {
+    hourElement2.innerText = hourCount;
+  } else {
+    hourElement2.innerHTML = '<b>0</b>' + hourCount;
+  }
+
+  if (String(minCount).length > 1) {
+    minElement2.innerText = minCount;
+  } else {
+    minElement2.innerHTML = '<b>0</b>' + minCount;
+  }
+
+  if (String(secCount).length > 1) {
+    secElement2.innerText = secCount;
+  } else {
+    secElement2.innerHTML = '<b>0</b>' + secCount;
   }
 }
 

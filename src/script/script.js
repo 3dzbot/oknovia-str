@@ -49,57 +49,102 @@ anchors.forEach(function (item) {
 
 //timer for sales-events block
 
-let timeFrom = 1585979; //starting point1
-let timeFrom1 = 1585979; //starting point2
+let timeFrom = 311761; //starting point1 in sec
+let timeFrom1 = 579515; //starting point2
 
 const msInMin = 60;
 const msInHour = msInMin * 60;
 const msInDay = msInHour * 24;
 
-const dayElement = document.getElementById('day');
-const hourElement = document.getElementById('hour');
-const minElement = document.getElementById('min');
-const secElement = document.getElementById('sec');
+const dayElement1 = document.getElementById('day1');
+const dayElement2 = document.getElementById('day2');
+const hourElement1 = document.getElementById('hour1');
+const hourElement2 = document.getElementById('hour2');
+const minElement1 = document.getElementById('min1');
+const minElement2 = document.getElementById('min2');
+const secElement1 = document.getElementById('sec1');
+const secElement2 = document.getElementById('sec2');
 
-timer();
+timer1();  //start timer function for 1st timer
+timer2();  //start timer function for 2nd timer
 
-function timer() {
+function timer1() {
 
-    const interval = setInterval(() => {
+    const interval1 = setInterval(() => {
         if (timeFrom > 0) {
-            getTime(timeFrom);
+            getTime1(timeFrom);
             timeFrom--;
         } else {
-            clearInterval(interval);
+            clearInterval(interval1);
+        }
+
+    }, 1000);
+}
+function timer2() {
+
+    const interval2 = setInterval(() => {
+        if (timeFrom1 > 0) {
+            getTime2(timeFrom1);
+            timeFrom1--;
+        } else {
+            clearInterval(interval2);
         }
 
     }, 1000);
 }
 
-function getTime(time) {
+function getTime1(time) {
     const dayCounts = Math.floor(time / msInDay);
     const hourCount = Math.floor(time % msInDay / msInHour);
     const minCount = Math.floor(time % msInHour / msInMin);
     const secCount = Math.floor(time % msInMin);
 
     if (String(dayCounts).length > 1) {
-        dayElement.innerText = dayCounts;
+        dayElement1.innerText = dayCounts;
     } else {
-        dayElement.innerHTML = '<b>0</b>' + dayCounts;
+        dayElement1.innerHTML = '<b>0</b>' + dayCounts;
     }
     if (String(hourCount).length > 1) {
-        hourElement.innerText = hourCount;
+        hourElement1.innerText = hourCount;
     } else {
-        hourElement.innerHTML = '<b>0</b>' + hourCount;
+        hourElement1.innerHTML = '<b>0</b>' + hourCount;
     }
-    if (String(minElement).length > 1) {
-        minElement.innerText = minCount;
+    if (String(minCount).length > 1) {
+        minElement1.innerText = minCount;
     } else {
-        minElement.innerHTML = '<b>0</b>' + minCount;
+        minElement1.innerHTML = '<b>0</b>' + minCount;
     }
     if (String(secCount).length > 1) {
-        secElement.innerText = secCount
+        secElement1.innerText = secCount
     } else {
-        secElement.innerHTML = '<b>0</b>' + secCount;
+        secElement1.innerHTML = '<b>0</b>' + secCount;
+    }
+};
+
+function getTime2(time) {
+    const dayCounts = Math.floor(time / msInDay);
+    const hourCount = Math.floor(time % msInDay / msInHour);
+    const minCount = Math.floor(time % msInHour / msInMin);
+    const secCount = Math.floor(time % msInMin);
+
+    if (String(dayCounts).length > 1) {
+        dayElement2.innerText = dayCounts;
+    } else {
+        dayElement2.innerHTML = '<b>0</b>' + dayCounts;
+    }
+    if (String(hourCount).length > 1) {
+        hourElement2.innerText = hourCount;
+    } else {
+        hourElement2.innerHTML = '<b>0</b>' + hourCount;
+    }
+    if (String(minCount).length > 1) {
+        minElement2.innerText = minCount;
+    } else {
+        minElement2.innerHTML = '<b>0</b>' + minCount;
+    }
+    if (String(secCount).length > 1) {
+        secElement2.innerText = secCount
+    } else {
+        secElement2.innerHTML = '<b>0</b>' + secCount;
     }
 };
