@@ -106,7 +106,8 @@
       line-height: 23px;
       text-decoration: none; }
       .header-slider nav a:hover {
-        text-decoration: underline; }
+        text-decoration: underline;
+        color: #f39c12; }
   .header-slider ul#slides {
     padding: 0;
     position: relative;

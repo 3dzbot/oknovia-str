@@ -46,4 +46,61 @@ anchors.forEach(function (item) {
 
     }, animationTime / framesCount);
   });
-});
+}); //timer for sales-events block
+
+var timeFrom = 1585979; //starting point1
+
+var timeFrom1 = 1585979; //starting point2
+
+var msInMin = 60;
+var msInHour = msInMin * 60;
+var msInDay = msInHour * 24;
+var dayElement = document.getElementById('day');
+var hourElement = document.getElementById('hour');
+var minElement = document.getElementById('min');
+var secElement = document.getElementById('sec');
+timer();
+
+function timer() {
+  var interval = setInterval(function () {
+    if (timeFrom > 0) {
+      getTime(timeFrom);
+      timeFrom--;
+    } else {
+      clearInterval(interval);
+    }
+  }, 1000);
+}
+
+function getTime(time) {
+  var dayCounts = Math.floor(time / msInDay);
+  var hourCount = Math.floor(time % msInDay / msInHour);
+  var minCount = Math.floor(time % msInHour / msInMin);
+  var secCount = Math.floor(time % msInMin);
+
+  if (String(dayCounts).length > 1) {
+    dayElement.innerText = dayCounts;
+  } else {
+    dayElement.innerHTML = '<b>0</b>' + dayCounts;
+  }
+
+  if (String(hourCount).length > 1) {
+    hourElement.innerText = hourCount;
+  } else {
+    hourElement.innerHTML = '<b>0</b>' + hourCount;
+  }
+
+  if (String(minElement).length > 1) {
+    minElement.innerText = minCount;
+  } else {
+    minElement.innerHTML = '<b>0</b>' + minCount;
+  }
+
+  if (String(secCount).length > 1) {
+    secElement.innerText = secCount;
+  } else {
+    secElement.innerHTML = '<b>0</b>' + secCount;
+  }
+}
+
+;
