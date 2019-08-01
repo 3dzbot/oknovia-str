@@ -217,6 +217,14 @@
           .header-slider ul#slides .slide .slide1 .slide1-button:hover {
             cursor: pointer;
             background-color: #e67e22; }
+      .header-slider ul#slides .slide-clock-block {
+        font-size: 30px;
+        color: #fff;
+        border: 2px solid #fff;
+        position: relative;
+        padding: 3px; }
+        .header-slider ul#slides .slide-clock-block:not(last-child) {
+          margin-left: 17px; }
     .header-slider ul#slides .slide:nth-of-type(1) {
       background-color: #3ea5ce; }
     .header-slider ul#slides .slide:nth-of-type(2) {
