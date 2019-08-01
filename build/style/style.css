@@ -751,6 +751,17 @@ textarea {
       font-size: 14px;
       line-height: 17px; }
 
+.form-third {
+  padding: 40px 0 50px; }
+
+.select-label {
+  width: 280px;
+  padding: 16px;
+  border-radius: 5px;
+  border: 1px solid silver;
+  text-align: center;
+  margin-bottom: 16px; }
+
 body {
   background-image: url("media/bg-fonts.png");
   font-family: OpenSans, Arial, sans-serif;
