@@ -492,7 +492,10 @@ textarea {
     position: relative;
     background-color: white;
     background-position: center;
-    background-repeat: no-repeat; }
+    background-repeat: no-repeat;
+    cursor: pointer; }
+    .certificates-flex:hover {
+      transform: scale(1.1); }
   .certificates-1 {
     background-image: url("media/sertificate1.png"); }
   .certificates-2 {
