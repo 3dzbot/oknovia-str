@@ -1,11 +1,18 @@
 "use strict";
 
 //prepare f for modal window
+var modalWindow = document.querySelector('.modal-window');
+
 function modal() {
-  alert('work');
+  modalWindow.style.display === 'block';
 }
 
-; //slider on header
+;
+
+modalWindow.onclick = function () {
+  modalWindow.style.display == 'none';
+}; //slider on header
+
 
 var slides = document.querySelectorAll('#slides .slide');
 var currentSlide = 0;

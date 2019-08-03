@@ -1,7 +1,13 @@
 //prepare f for modal window
+let modalWindow = document.querySelector('.modal-window');
+
 function modal(){
-    alert('work');
+    modalWindow.style.display === 'block';
 };
+
+modalWindow.onclick = function(){
+    modalWindow.style.display == 'none'
+}
 
 //slider on header
 let slides = document.querySelectorAll('#slides .slide');
