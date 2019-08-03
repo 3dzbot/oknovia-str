@@ -148,3 +148,25 @@ function getTime2(time) {
         secElement2.innerHTML = '<b>0</b>' + secCount;
     }
 };
+
+//create event tabs
+let ourLinksBlock = document.querySelector('.our-links-links');
+
+ourLinksBlock.addEventListener('click', (e)=>{
+   let target = e.target;
+    if(target.tagName != 'A') return;
+    let indexBlock = +target.getAttribute('data-index')
+    linksTab(indexBlock);
+});
+
+function linksTab(index){
+    let textArr = document.querySelectorAll('.our-links-text');
+
+    textArr[0].classList.remove('our-links-text-visible');
+    for (let i = 0; i < textArr.length; i++) {
+        if (textArr[i].classList.contains('our-links-text-visible')) {
+            textArr[i].classList.remove('our-links-text-visible');
+        }
+    }
+    textArr[index].classList.add('our-links-text-visible');
+};

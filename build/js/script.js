@@ -153,4 +153,27 @@ function getTime2(time) {
   }
 }
 
+; //create event tabs
+
+var ourLinksBlock = document.querySelector('.our-links-links');
+ourLinksBlock.addEventListener('click', function (e) {
+  var target = e.target;
+  if (target.tagName != 'A') return;
+  var indexBlock = +target.getAttribute('data-index');
+  linksTab(indexBlock);
+});
+
+function linksTab(index) {
+  var textArr = document.querySelectorAll('.our-links-text');
+  textArr[0].classList.remove('our-links-text-visible');
+
+  for (var i = 0; i < textArr.length; i++) {
+    if (textArr[i].classList.contains('our-links-text-visible')) {
+      textArr[i].classList.remove('our-links-text-visible');
+    }
+  }
+
+  textArr[index].classList.add('our-links-text-visible');
+}
+
 ;

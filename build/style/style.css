@@ -710,7 +710,10 @@ textarea {
     width: 11px;
     background-image: url("media/arrow-link.png"); }
   .our-links-text {
-    width: 466px; }
+    width: 466px;
+    display: none; }
+    .our-links-text-visible {
+      display: block; }
 
 .we-are-best {
   background-image: url("media/we-are-best-bg.png");
