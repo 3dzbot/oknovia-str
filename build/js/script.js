@@ -4,13 +4,17 @@
 var modalWindow = document.querySelector('.modal-window');
 
 function modal() {
-  modalWindow.style.display === 'block';
+  modalWindow.style.display = 'block';
+  modalWindow.style.top = pageYOffset + 'px';
+
+  modalWindow.onwheel = function (e) {
+    e.preventDefault();
+  };
 }
 
-;
-
-modalWindow.onclick = function () {
-  modalWindow.style.display == 'none';
+modalWindow.onclick = function (e) {
+  if (e.target.tagName == 'INPUT' || e.target.tagName == 'BUTTON' || e.target.tagName == 'SELECT') return;
+  modalWindow.style.display = 'none';
 }; //slider on header
 
 
