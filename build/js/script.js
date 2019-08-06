@@ -1,18 +1,54 @@
 "use strict";
 
-//prepare f for modal window
-var modalWindow = document.querySelector('.modal-window');
+//modal window for click on certificate
+var modalCertificate = document.getElementsByClassName('modal-certificate')[0];
+var arrCertificate = document.querySelectorAll('.certificates-flex');
+arrCertificate.forEach(function (item) {
+  item.addEventListener('click', newModal);
+});
+
+function newModal(e) {
+  var modCertImg = document.querySelector('.modal-certificate-img');
+  var target = e.target;
+  var imgSrc = target.getAttribute('data-src');
+  var blockStyleDisplay = false;
+
+  if (blockStyleDisplay == false) {
+    modalCertificate.style.display = 'block';
+
+    modalCertificate.onwheel = function (e) {
+      //отключил прокрутку при активном модальном окне
+      e.preventDefault();
+    };
+
+    modalCertificate.style.top = pageYOffset + 'px';
+    blockStyleDisplay == true;
+    modCertImg.style.backgroundImage = 'url(' + imgSrc + ')';
+  } else if (modalCertificate.onclick) {
+    modalCertificate.display.style = '';
+  }
+}
+
+modalCertificate.addEventListener('click', function () {
+  modalCertificate.style.display = 'none';
+}); //prepare f for modal window
+
+var modalWindow = document.querySelector('.modal-window'); //определил блок
 
 function modal() {
-  modalWindow.style.display = 'block';
-  modalWindow.style.top = pageYOffset + 'px';
+  //повесил событие на кнопку
+  modalWindow.style.display = 'block'; //при клике возникает модальное окно
+
+  modalWindow.style.top = pageYOffset + 'px'; //просчитал верхнюю границу мод.окна при скроле
 
   modalWindow.onwheel = function (e) {
+    //отключил прокрутку при активном модальном окне
     e.preventDefault();
   };
 }
 
 modalWindow.onclick = function (e) {
+  //установил событие закрытия по клику на модальном окне
   if (e.target.tagName == 'INPUT' || e.target.tagName == 'BUTTON' || e.target.tagName == 'SELECT') return;
   modalWindow.style.display = 'none';
 }; //slider on header

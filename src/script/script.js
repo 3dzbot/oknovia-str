@@ -1,15 +1,44 @@
-//prepare f for modal window
-let modalWindow = document.querySelector('.modal-window');
+//modal window for click on certificate
+let modalCertificate = document.getElementsByClassName('modal-certificate')[0];
+let arrCertificate = document.querySelectorAll('.certificates-flex');
+arrCertificate.forEach(item => {
+    item.addEventListener('click', newModal)
+});
 
-function modal(){
-    modalWindow.style.display = 'block';
-    modalWindow.style.top = pageYOffset+'px';
-    modalWindow.onwheel = function (e) {
+function newModal(e){
+    let modCertImg = document.querySelector('.modal-certificate-img');
+
+    let target = e.target;
+    let imgSrc = target.getAttribute('data-src');
+    let blockStyleDisplay = false;
+    if (blockStyleDisplay == false) {
+        modalCertificate.style.display = 'block';
+        modalCertificate.onwheel = function (e) {   //отключил прокрутку при активном модальном окне
+            e.preventDefault()
+        };
+        modalCertificate.style.top = pageYOffset+'px';
+        blockStyleDisplay == true;
+        modCertImg.style.backgroundImage = 'url('+imgSrc+')';
+    } else if (modalCertificate.onclick) {
+        modalCertificate.display.style = '';
+    }
+}
+modalCertificate.addEventListener('click', ()=>{
+    modalCertificate.style.display = 'none';
+});
+
+//prepare f for modal window
+let modalWindow = document.querySelector('.modal-window'); //определил блок
+
+function modal(){   //повесил событие на кнопку
+    modalWindow.style.display = 'block';        //при клике возникает модальное окно
+    modalWindow.style.top = pageYOffset+'px';   //просчитал верхнюю границу мод.окна при скроле
+    modalWindow.onwheel = function (e) {   //отключил прокрутку при активном модальном окне
         e.preventDefault()
     }
 }
 
-modalWindow.onclick = function(e){
+modalWindow.onclick = function(e){   //установил событие закрытия по клику на модальном окне
     if ((e.target.tagName == 'INPUT')||(e.target.tagName == 'BUTTON')||(e.target.tagName == 'SELECT')) return;
     modalWindow.style.display = 'none';
 };
