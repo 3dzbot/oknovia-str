@@ -543,15 +543,15 @@ textarea {
     opacity: 0.8; }
 
 .our-skills-flex {
-  padding-bottom: 35px; }
+  padding-bottom: 28px; }
   .our-skills-flex > h3 {
     padding: 40px 0 0;
     font-size: 30px; }
 
 .our-skills .our-skills-img {
   margin: 25px 0 16px;
-  width: 147px;
-  height: 147px;
+  width: 150px;
+  height: 150px;
   border: 6px solid silver;
   border-radius: 50%;
   box-sizing: border-box;
@@ -562,39 +562,41 @@ textarea {
   border: none;
   cursor: pointer; }
 
-.our-skills-1 .our-skills-1-img {
-  background-image: url("media/skills1.png"); }
+.our-skills-1 {
+  width: 100%; }
+  .our-skills-1 .our-skills-1-img {
+    background-image: url("media/skills1.png"); }
+  .our-skills-1 .our-skills-2-img {
+    background-image: url("media/skills2.png"); }
+  .our-skills-1 .our-skills-3-img {
+    background-image: url("media/skills3.png"); }
+  .our-skills-1 .our-skills-4-img {
+    background-image: url("media/skills4.png"); }
 
-.our-skills-1 .our-skills-2-img {
-  background-image: url("media/skills2.png"); }
+.our-skills-2 {
+  width: 760px;
+  padding: 5px 0 0; }
+  .our-skills-2 .our-skills-1-img {
+    background-image: url("media/skills5.png"); }
+  .our-skills-2 .our-skills-2-img {
+    background-image: url("media/skills6.png"); }
+  .our-skills-2 .our-skills-3-img {
+    background-image: url("media/skills7.png"); }
 
-.our-skills-1 .our-skills-3-img {
-  background-image: url("media/skills3.png"); }
-
-.our-skills-1 .our-skills-4-img {
-  background-image: url("media/skills4.png"); }
-
-.our-skills-2 .our-skills-1-img {
-  background-image: url("media/skills5.png"); }
-
-.our-skills-2 .our-skills-2-img {
-  background-image: url("media/skills6.png"); }
-
-.our-skills-2 .our-skills-3-img {
-  background-image: url("media/skills7.png"); }
-
-.our-skills-3 .our-skills-1-img {
-  background-image: url("media/skills8.png"); }
-
-.our-skills-3 .our-skills-2-img {
-  background-image: url("media/skills9.png"); }
+.our-skills-3 {
+  padding: 5px 0 0; }
+  .our-skills-3 .our-skills-1-img {
+    background-image: url("media/skills8.png"); }
+  .our-skills-3 .our-skills-2-img {
+    background-image: url("media/skills9.png"); }
 
 .our-skills .flex > .flex-col > h4 {
   text-transform: uppercase;
   text-align: center;
   font-size: 15px;
   font-weight: bold;
-  width: 213px; }
+  width: 213px;
+  line-height: 19px; }
 
 .form-block {
   background-image: url("media/form-bg.png");
