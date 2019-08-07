@@ -1,8 +1,10 @@
 "use strict";
 
-//modal window for click on certificate
-var modalCertificate = document.getElementsByClassName('modal-certificate')[0];
-var arrCertificate = document.querySelectorAll('.certificates-flex');
+// <================== modal window for click on the certificate =================>
+var modalCertificate = document.getElementsByClassName('modal-certificate')[0]; //modal window with certificate
+
+var arrCertificate = document.querySelectorAll('.certificates-flex'); //array with our certificate-block
+
 arrCertificate.forEach(function (item) {
   item.addEventListener('click', newModal);
 });
@@ -11,27 +13,21 @@ function newModal(e) {
   var modCertImg = document.querySelector('.modal-certificate-img');
   var target = e.target;
   var imgSrc = target.getAttribute('data-src');
-  var blockStyleDisplay = false;
+  modalCertificate.style.display = 'block';
 
-  if (blockStyleDisplay == false) {
-    modalCertificate.style.display = 'block';
+  modalCertificate.onwheel = function (e) {
+    e.preventDefault();
+  }; //disabled default event
 
-    modalCertificate.onwheel = function (e) {
-      //отключил прокрутку при активном модальном окне
-      e.preventDefault();
-    };
 
-    modalCertificate.style.top = pageYOffset + 'px';
-    blockStyleDisplay == true;
-    modCertImg.style.backgroundImage = 'url(' + imgSrc + ')';
-  } else if (modalCertificate.onclick) {
-    modalCertificate.display.style = '';
-  }
+  modalCertificate.style.top = pageYOffset + 'px';
+  modCertImg.style.backgroundImage = 'url(' + imgSrc + ')';
 }
 
 modalCertificate.addEventListener('click', function () {
+  //cover modalW after click on him
   modalCertificate.style.display = 'none';
-}); //prepare f for modal window
+}); //<====================== modal w on click header|footer button ===================>
 
 var modalWindow = document.querySelector('.modal-window'); //определил блок
 
@@ -39,7 +35,7 @@ function modal() {
   //повесил событие на кнопку
   modalWindow.style.display = 'block'; //при клике возникает модальное окно
 
-  modalWindow.style.top = pageYOffset + 'px'; //просчитал верхнюю границу мод.окна при скроле
+  modalWindow.style.top = pageYOffset + 'px'; //установил верхнюю границу мод.окна с учетом скрола
 
   modalWindow.onwheel = function (e) {
     //отключил прокрутку при активном модальном окне
@@ -51,7 +47,7 @@ modalWindow.onclick = function (e) {
   //установил событие закрытия по клику на модальном окне
   if (e.target.tagName == 'INPUT' || e.target.tagName == 'BUTTON' || e.target.tagName == 'SELECT') return;
   modalWindow.style.display = 'none';
-}; //slider on header
+}; //<====================== slider on header ============================>
 
 
 var slides = document.querySelectorAll('#slides .slide');
@@ -59,10 +55,32 @@ var currentSlide = 0;
 var slideInterval = setInterval(nextSlide, 3000);
 
 function nextSlide() {
+  goToSlide(currentSlide + 1);
+}
+
+function previousSlide() {
+  goToSlide(currentSlide - 1);
+}
+
+function goToSlide(n) {
   slides[currentSlide].className = 'slide';
-  currentSlide = (currentSlide + 1) % slides.length;
+  currentSlide = (n + slides.length) % slides.length;
   slides[currentSlide].className = 'slide showing';
-} //плавная прокрутка к якорю
+}
+
+var next = document.getElementById('next');
+var previous = document.getElementById('previous');
+
+next.onclick = function () {
+  clearInterval(slideInterval);
+  nextSlide();
+};
+
+previous.onclick = function () {
+  clearInterval(slideInterval);
+  previousSlide();
+}; //<======================== smooth scrolling =====================>
+//плавная прокрутка к якорю
 // собираем все якоря; устанавливаем время анимации и количество кадров
 
 
@@ -93,7 +111,7 @@ anchors.forEach(function (item) {
 
     }, animationTime / framesCount);
   });
-}); //timer for sales-events block
+}); //<================ timer for sales-events block(very bad) ================>
 
 var timeFrom = 311761; //starting point1 in sec
 
@@ -200,27 +218,34 @@ function getTime2(time) {
   }
 }
 
-; //create event tabs
+; // <==================== event on our-service block =====================>
 
-var ourLinksBlock = document.querySelector('.our-links-links');
+var ourLinksBlock = document.querySelector('.our-links-links'); //array with links
+
 ourLinksBlock.addEventListener('click', function (e) {
+  //add evList on the block with links
   var target = e.target;
-  if (target.tagName != 'A') return;
-  var indexBlock = +target.getAttribute('data-index');
-  linksTab(indexBlock);
+  if (target.tagName != 'A') return; //checking is this a link?
+
+  var indexBlock = +target.getAttribute('data-index'); //if true - get attribute value
+
+  linksTab(indexBlock); //start function with params
 });
 
 function linksTab(index) {
-  var textArr = document.querySelectorAll('.our-links-text');
-  textArr[0].classList.remove('our-links-text-visible');
+  //work with link and text block
+  var textArr = document.querySelectorAll('.our-links-text'); //text blocks on array
+
+  textArr[0].classList.remove('our-links-text-visible'); //remove default class on 1st text-block
 
   for (var i = 0; i < textArr.length; i++) {
     if (textArr[i].classList.contains('our-links-text-visible')) {
-      textArr[i].classList.remove('our-links-text-visible');
+      //checking classList
+      textArr[i].classList.remove('our-links-text-visible'); //if true - remove
     }
   }
 
-  textArr[index].classList.add('our-links-text-visible');
+  textArr[index].classList.add('our-links-text-visible'); //add class to classList on the index.block
 }
 
 ;

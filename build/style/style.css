@@ -27,7 +27,7 @@
   .header-top, .footer-top {
     justify-content: space-between;
     align-items: center;
-    padding: 10px 0 13px; }
+    padding: 9px 0 11px; }
     .header-top .logo-img, .footer-top .logo-img {
       background-image: url("media/logo.png");
       width: 68px;
@@ -93,7 +93,7 @@
   background-color: #0083b5; }
   .header-slider nav {
     position: absolute;
-    top: 22px;
+    top: 20px;
     background-color: #0083b5;
     width: 100%;
     padding: 14px 0;
@@ -243,13 +243,35 @@
       opacity: 1;
       z-index: 2; }
 
+#sales-event {
+  position: relative; }
+  #sales-event .controls {
+    position: absolute;
+    border-radius: 50%;
+    text-align: center;
+    width: 80px;
+    border: 2px solid #fff;
+    font-size: 32px;
+    color: #fff;
+    padding: 24px 0; }
+    #sales-event .controls:hover {
+      cursor: pointer;
+      border-color: #0083b5;
+      color: #0083b5; }
+  #sales-event .previous {
+    top: 284px;
+    left: -128px; }
+  #sales-event .next {
+    top: 284px;
+    right: -128px; }
+
 .price > .center {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-bottom: 24px; }
   .price > .center > h2 {
-    width: 940px;
+    width: 100%;
     color: #2e2e2e;
     font-size: 30px;
     padding: 46px 0 42px;
