@@ -331,7 +331,7 @@
 
 .price p.text {
   font-size: 18px;
-  padding-bottom: 14px;
+  padding: 9px 0;
   text-align: center; }
 
 .price p.text-phone {
@@ -339,7 +339,7 @@
   font-weight: bold;
   width: 100%;
   font-size: 24px;
-  padding-bottom: 24px; }
+  padding: 24px 0 24px; }
 
 .price h3 {
   text-align: center;
@@ -349,7 +349,8 @@
   margin-bottom: 9px; }
 
 .price-form {
-  width: 660px; }
+  width: 660px;
+  padding: 12px 0 0; }
   .price-form .form-wrap {
     padding-bottom: 14px;
     justify-content: space-between; }
@@ -395,7 +396,7 @@
   width: 282px;
   height: 25px;
   background-image: url("media/security-blue.png");
-  margin: 0 auto 43px;
+  margin: 0 auto 2px;
   background-repeat: no-repeat;
   cursor: pointer;
   position: relative;
@@ -452,7 +453,8 @@ textarea {
 
 .guarantee-year {
   width: 175px;
-  height: 152px; }
+  height: 152px;
+  margin-bottom: 15px; }
 
 .guarantee-flex {
   display: flex;
@@ -472,19 +474,20 @@ textarea {
     text-transform: uppercase;
     text-align: center;
     width: 265px; }
-    .guarantee-flex > h3:first-child {
+    .guarantee-flex > h3.title-1 {
       width: 300px; }
 
 .guarantee-wrap {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  padding-bottom: 40px; }
+  padding-bottom: 42px; }
 
 .guarantee-photo {
   width: 265px;
   height: 287px;
-  background-image: url("media/guarantee-photo.png"); }
+  background-image: url("media/guarantee-photo.png");
+  margin-left: 35px; }
 
 .guarantee-text {
   width: 655px; }

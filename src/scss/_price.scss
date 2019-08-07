@@ -96,7 +96,7 @@
 
   p.text {
     font-size: 18px;
-    padding-bottom: 14px;
+    padding: 9px 0;
     text-align: center;
   }
 
@@ -105,7 +105,7 @@
     font-weight: bold;
     width: 100%;
     font-size: 24px;
-    padding-bottom: 24px;
+    padding: 24px 0 24px;
   }
 
   h3 {
@@ -117,6 +117,7 @@
   }
   &-form {
     width: 660px;
+    padding: 12px 0 0;
     .form-wrap {
       padding-bottom: 14px;
       justify-content: space-between;
@@ -171,7 +172,7 @@
   width: 282px;
   height: 25px;
   background-image: url("media/security-blue.png");
-  margin: 0 auto 43px;
+  margin: 0 auto 2px;
   background-repeat: no-repeat;
   cursor: pointer;
   position: relative;
