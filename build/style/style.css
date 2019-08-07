@@ -604,30 +604,29 @@ textarea {
   text-align: center; }
   .form-block > .center > h3 {
     font-size: 30px;
-    width: 900px;
-    padding-top: 36px; }
+    padding-top: 40px; }
   .form-block > .center > p {
     font-size: 21px;
-    padding: 16px 0 0;
-    font-weight: bold;
-    width: 890px; }
-
-.form-block-security {
-  background-image: url("media/security.png"); }
+    padding: 20px 0 0;
+    font-weight: bold; }
 
 .security-title-form {
   color: #000; }
 
 .form-block-form {
-  padding-top: 16px; }
+  padding-top: 40px; }
   .form-block-form .form-btn-form {
     width: 359px;
     padding: 0 10px; }
 
+.form-block-security {
+  background-image: url("media/security.png");
+  padding-bottom: 30px; }
+
 .comments > .center > h3 {
   font-size: 30px;
   text-align: center;
-  padding: 55px 0 0; }
+  padding: 50px 0 0; }
 
 .comments-flex {
   display: flex;
@@ -656,9 +655,10 @@ textarea {
       font-size: 14px;
       line-height: 20px; }
   .comments-block > p {
-    padding-top: 30px;
+    padding-top: 22px;
     font-size: 15px;
-    font-style: italic; }
+    font-style: italic;
+    line-height: 20px; }
 
 .learn-true {
   background-image: url("media/learn-true-bg.png");
@@ -687,7 +687,7 @@ textarea {
       margin: 0 auto; }
     .learn-true .learn-flex-block {
       width: 310px;
-      padding: 0 0 57px; }
+      padding: 0 0 59px; }
       .learn-true .learn-flex-block .learn-logo {
         height: 64px;
         margin-bottom: 22px;
@@ -697,7 +697,8 @@ textarea {
         font-size: 15px; }
       .learn-true .learn-flex-block > p {
         font-size: 14px;
-        padding-top: 4px; }
+        padding-top: 4px;
+        line-height: 17px; }
 
 .form-second {
   padding: 40px 0 34px; }

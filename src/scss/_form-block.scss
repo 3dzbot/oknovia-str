@@ -5,27 +5,26 @@
   & > .center {
     &> h3 {
       font-size: 30px;
-      width: 900px;
-      padding-top: 36px;
+      padding-top: 40px;
     }
     &>p {
       font-size: 21px;
-      padding: 16px 0 0;
+      padding: 20px 0 0;
       font-weight: bold;
-      width: 890px;
     }
   }
-}
-.form-block-security {
-  background-image: url("media/security.png");
 }
 .security-title-form {
   color: #000;
 }
 .form-block-form {
-  padding-top: 16px;
+  padding-top: 40px;
   .form-btn-form {
     width: 359px;
     padding: 0 10px;
   }
+}
+.form-block-security {
+  background-image: url("media/security.png");
+  padding-bottom: 30px;
 }
