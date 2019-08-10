@@ -4,6 +4,19 @@
   & > .flex {
     justify-content: space-between;
   }
+  & .logo-text {
+    & > h1 {
+      color: #fff;
+    }
+  }
+  &-contact-phone {
+    & > a.phone-me  {
+      color: #fff;
+    }
+    &.header-contact-phone > p {
+      color: #fff;
+    }
+  }
   &-bottom {
     text-align: center;
     &>  p {

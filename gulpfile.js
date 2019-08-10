@@ -1,16 +1,12 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass');
-// const htmlmin = require('gulp-htmlmin');
-var browserSync = require('browser-sync').create();
-// var rename = require('gulp-rename');
-// var uglify = require('gulp-uglify');//оптимизатор js
-// var concat = require('gulp-concat');//объединение js
+const browserSync = require('browser-sync').create();
 const autoprefixer = require('gulp-autoprefixer');
-// const cleanCSS = require('gulp-clean-css');
-var babel = require("gulp-babel");
+const babel = require("gulp-babel");
 
+sass.compiler = require('node-sass');
 
-var path = {
+const path = {
     src:{
         style: "./src/scss/style.scss",
         script: "./src/script/**/*.js",
@@ -21,9 +17,7 @@ var path = {
         script: "./build/js",
         html: "./",
     }
-}
-
-sass.compiler = require('node-sass');
+};
 
 gulp.task('sass', function(){
     return gulp.src(path.src.style)
@@ -37,13 +31,11 @@ function styles(){
             overrideBrowserslist: ['last 2 versions'],
             cascade: false
         }))
-        // .pipe(cleanCSS({level: 2}))
         .pipe(gulp.dest(path.dist.style))
 }
 
 function html() {
     return gulp.src(path.src.html)
-        // .pipe(htmlmin({ collapseWhitespace: true }))
         .pipe(gulp.dest(path.dist.html));
 };
 
@@ -52,10 +44,6 @@ function scripts() {
         .pipe(babel({
             presets: ['@babel/env']
         }))
-        // .pipe(concat('script.js')) //слитие в единый файл
-        // .pipe(gulp.dest(path.dist.script))
-        // .pipe(rename({ suffix: '.min' }))
-        // .pipe(uglify())
         .pipe(gulp.dest(path.dist.script))
 };
 
@@ -64,9 +52,7 @@ gulp.task('html', html);
 gulp.task('server', server);
 gulp.task('styles', styles);
 
-
 function server() {
-
     browserSync.init({
         server: "./"
     });
