@@ -831,7 +831,12 @@ textarea {
   background-image: url("media/we-are-best-bg.png");
   background-color: #e8e8e8;
   color: #ffffff;
-  text-align: center; }
+  text-align: center;
+  -moz-user-select: none;
+  -o-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
   .we-are-best > .center > h3 {
     font-size: 30px;
     color: #ffffff;
@@ -849,7 +854,26 @@ textarea {
       border: 6px solid rgba(0, 0, 0, 0.17);
       -webkit-box-sizing: content-box;
       box-sizing: content-box;
-      position: relative; }
+      position: relative;
+      background-repeat: no-repeat;
+      background-position: center center; }
+      .we-are-best .we-are-flex-col .we-are-best-circle:hover {
+        cursor: pointer; }
+        .we-are-best .we-are-flex-col .we-are-best-circle:hover:after {
+          border-color: #ff696e; }
+      .we-are-best .we-are-flex-col .we-are-best-circle:active {
+        background-position: 52% 52%; }
+        .we-are-best .we-are-flex-col .we-are-best-circle:active:after {
+          border-color: #1f8b1d; }
+      .we-are-best .we-are-flex-col .we-are-best-circle-img1 {
+        background-image: url("media/we-after11.png");
+        background-position: 44% center; }
+        .we-are-best .we-are-flex-col .we-are-best-circle-img1:active {
+          background-position: 46% 52%; }
+      .we-are-best .we-are-flex-col .we-are-best-circle-img2 {
+        background-image: url("media/we-after2.png"); }
+      .we-are-best .we-are-flex-col .we-are-best-circle-img3 {
+        background-image: url("media/we-after3.png"); }
       .we-are-best .we-are-flex-col .we-are-best-circle:after {
         position: absolute;
         top: 10px;
@@ -859,14 +883,7 @@ textarea {
         border-radius: 50%;
         border: 5px solid #f39c12;
         content: '';
-        background-image: url("media/we-after1.png");
-        z-index: 4;
-        background-position: 33% 43%;
-        background-repeat: no-repeat; }
-      .we-are-best .we-are-flex-col .we-are-best-circle:hover {
-        cursor: pointer; }
-        .we-are-best .we-are-flex-col .we-are-best-circle:hover:after {
-          border-color: darkred; }
+        z-index: 4; }
     .we-are-best .we-are-flex-col > h4 {
       text-transform: uppercase;
       font-size: 15px;
