@@ -135,10 +135,10 @@
           background-position: center;
           z-index: 3;
         }
-        &[for="input-name"]:after, &[for="input-name-f"]:after {
+        &[for="input-name"]:after, &[for="input-name-f"]:after, &[for="input-name-f1"]:after, &[for="input-name-foo"]:after, &[for="input-name-foo1"]:after {
            background-image: url("media/form-after-man.png");
          }
-        &[for="input-phone"]:after, &[for="input-phone-f"]:after {
+        &[for="input-phone"]:after, &[for="input-phone-f"]:after, &[for="input-phone-f1"]:after, &[for="input-phone-foo"]:after, &[for="input-phone-foo1"]:after {
           background-image: url("media/form-after-phone.png");
         }
       }

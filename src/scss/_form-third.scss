@@ -1,5 +1,11 @@
 .form-third {
-  padding: 40px 0 50px;
+  padding: 32px 0 58px;
+  & .form-wrap {
+    width: 100%;
+  }
+  & input[type='text'].input-label {
+    width: 265px;
+  }
 }
 .select-label {
   width: 280px;

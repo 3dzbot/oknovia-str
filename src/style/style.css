@@ -367,9 +367,9 @@
         height: 36px;
         background-position: center;
         z-index: 3; }
-      .price-form .form-wrap label[for="input-name"]:after, .price-form .form-wrap label[for="input-name-f"]:after {
+      .price-form .form-wrap label[for="input-name"]:after, .price-form .form-wrap label[for="input-name-f"]:after, .price-form .form-wrap label[for="input-name-f1"]:after, .price-form .form-wrap label[for="input-name-foo"]:after, .price-form .form-wrap label[for="input-name-foo1"]:after {
         background-image: url("media/form-after-man.png"); }
-      .price-form .form-wrap label[for="input-phone"]:after, .price-form .form-wrap label[for="input-phone-f"]:after {
+      .price-form .form-wrap label[for="input-phone"]:after, .price-form .form-wrap label[for="input-phone-f"]:after, .price-form .form-wrap label[for="input-phone-f1"]:after, .price-form .form-wrap label[for="input-phone-foo"]:after, .price-form .form-wrap label[for="input-phone-foo1"]:after {
         background-image: url("media/form-after-phone.png"); }
     .price-form .form-wrap .input-label {
       width: 280px;
@@ -802,7 +802,11 @@ textarea {
       line-height: 17px; }
 
 .form-third {
-  padding: 40px 0 50px; }
+  padding: 32px 0 58px; }
+  .form-third .form-wrap {
+    width: 100%; }
+  .form-third input[type='text'].input-label {
+    width: 265px; }
 
 .select-label {
   width: 280px;
